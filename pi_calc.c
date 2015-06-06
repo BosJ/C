@@ -6,7 +6,7 @@
     gcc pi_calc.c -o pi_calc -lpthread 
 
     Jaco Bos, University of Twente
-    Besturings-systemen, assignment 1, task 1
+    Besturings-systemen, assignment 1, task 1 
 */
 
 #include <stdio.h>
@@ -23,7 +23,6 @@ pthread_mutex_t mutexPi = PTHREAD_MUTEX_INITIALIZER;
 double piVal = 0;
 int iteration = 0;
 bool print = true;
-
 
 int main(int argc, char *argv[]) 
 {
@@ -53,7 +52,6 @@ int main(int argc, char *argv[])
     printf("Final result:\n# Iterations: %d, PI: %f\n", iteration, piVal);
     exit(0);
 }
-
 
 void *piCalculate(void *ptr) 
 {
@@ -94,7 +92,6 @@ void *piCalculate(void *ptr)
     printf("Finished calculation\n");
     return NULL;
 }
-
 
 void *piPrint(void *ptr) 
 {
