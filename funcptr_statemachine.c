@@ -4,7 +4,7 @@ void led_on();
 void led_off();
 void (*statefunc)() = led_on;
 
-static int led = 0;
+int led;
 
 void led_on() {
     printf("led: %d\n", led = 1);
