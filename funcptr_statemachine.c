@@ -1,25 +1,27 @@
 #include <stdio.h>
 
-void led_on();
-void led_off();
-void (*statefunc)() = led_on;
+#define print_ptr(x) printf("%s=%p\n", #x, x);
 
-int led;
+void on();
+void off();
+void (*func_ptr)() = on;
 
-void led_on() {
-    printf("led: %d\n", led = 1);
-    statefunc = led_off;
+void on() 
+{
+    func_ptr = off;
 }
 
-void led_off() {
-    printf("led: %d\n", led = 0);
-    statefunc = led_on;
+void off() 
+{
+    func_ptr = on;
 }
 
-int main() {
+int main() 
+{
    while(1) {
-       (*statefunc)();
-       sleep(1); 
-  }
-  return 1;
+    	(*func_ptr)();
+        print_ptr(func_ptr);
+    	sleep(1);
+   }
+   return 1;
 }
