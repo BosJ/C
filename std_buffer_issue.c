@@ -15,5 +15,5 @@ int main()
         fprintf(stderr,"hello-err");
         sleep(1);
     }
-    return 0;
+    return 1;
 }
