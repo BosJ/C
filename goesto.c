@@ -8,3 +8,5 @@ int main()
     printf("%d ", x);
   }
 }
+
+/* same as: while( (x--) > 0 ) */
