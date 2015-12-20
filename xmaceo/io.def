@@ -1,0 +1,13 @@
+#ifdef DEF_OUT
+  DEF_OUT(out1)
+  DEF_OUT(out2)
+#endif
+
+#ifdef DEF_IN
+  DEF_IN(in1)
+  DEF_IN(in2)
+  DEF_IN(in3)
+#endif
+
+#undef DEF_OUT
+#undef DEF_IN
