@@ -21,4 +21,5 @@ struct ios {
   int notused;
 } io;
 ```
-This example shows a solution using a technique called XMACROS.
+This example shows a preprocessor-metaprogramming solution using a technique called XMACROS. During debugging 
+```gcc -E xmacro.c -o xmacro.i``` can be used to apply the preprocessor and inspect the results.
