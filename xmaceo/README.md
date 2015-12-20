@@ -1,0 +1,2 @@
+#xmacro example
+test
