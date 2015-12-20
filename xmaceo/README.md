@@ -1,5 +1,6 @@
 #xmacro example
 
+Lets say we have something as shown below and we want to do something to all output members of the struct ´´´io´´´
 ```c
 typedef struct outputs {
   int val;
