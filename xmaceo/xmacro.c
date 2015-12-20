@@ -22,7 +22,7 @@ struct ios {
 } io;
 
 void init_io (void) {
-  int i,j = 1;
+  int i = 1, j = 1;
   #define DEF_OUT(name) \
     io.name.nr = i; io.name.val = 0; i++;
   #define DEF_IN(name)  \
