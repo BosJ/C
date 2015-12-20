@@ -1,6 +1,6 @@
 #xmacro example
 
-Lets say we have something as shown below and we want to do something to all members of ```io``` of type ```output``` and somthing else to all members of type ```output``` in a __scalable__ way. 
+Lets say we have something as shown below and we want to do something to all members of ```io``` of type ```output``` and something else to all members of type ```input``` in a _scalable_ way. Because it is not possible to evaluate a type at runtime this is not trivial;
 ```c
 typedef struct outputs {
   int val;
@@ -21,3 +21,4 @@ struct ios {
   int notused;
 } io;
 ```
+This example shows a solution using a technique called XMACROS.
