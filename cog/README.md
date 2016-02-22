@@ -3,7 +3,7 @@ Python file generator example, see http://nedbatchelder.com/code/cog/index.html#
 ```python -m cogapp -d -o result.c src.c```
 
 Result:
-```
+```C
 #include <stdio.h>
 
 int main() {
