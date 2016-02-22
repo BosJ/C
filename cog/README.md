@@ -1,8 +1,5 @@
-Python file generator example.
+Python file generator example, see http://nedbatchelder.com/code/cog/index.html#h_installation
 
-http://nedbatchelder.com/code/cog/index.html#h_installation
-
-E.g.
 ```python -m cogapp -d -o result.c src.c```
 
 Result:
