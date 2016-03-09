@@ -4,11 +4,11 @@
 int main() {
 
 	int x = 1;
-
+	
 	switch(x) {
-
+	
 	char greeting[] = "Hello\n";
-
+	
 	case 1:
 		printf("%s", greeting);
 		break;
