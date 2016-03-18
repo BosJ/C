@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* string declaration between switch and first case is not Ok */ 
+/* var declaration between switch and first case is not Ok */ 
 int main() {
 
 	int x = 1;
