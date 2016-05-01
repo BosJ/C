@@ -1,3 +1,5 @@
+-- Largest prime factor
+
 import Data.Int
 import Data.Char
 import Data.List
