@@ -16,9 +16,9 @@ checkIfPrime n
     | find (>= n) sieve == Just n = True
     | otherwise = False
 
--- Get all divisors of m
+-- Get all divisors of m (excl. m)
 divisors :: Int64 -> [Int64]
-divisors m = [ x | x<-[1..m], (mod m x) == 0 ]
+divisors m = [ x | x<-[1..(quot m 2)], (mod m x) == 0 ]
 
 -- Largest prime factor
 largestPrimeFactor :: Int64 -> Maybe Int64
