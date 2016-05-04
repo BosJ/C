@@ -1,25 +1,11 @@
--- Largest prime factor
-
 import Data.Int
-import Data.Char
 import Data.List
-import Data.Tuple
 
--- Note: sieve produces infinite prime numbers
-sieve :: [Int64]
-sieve = f [2,3..]
-    where f (x:xs) = x : f [ y | y<-xs, (mod y x) /= 0 ]
+isqrt :: Int64 -> Int64
+isqrt = floor . sqrt . fromIntegral
 
--- Check if n is prime
-checkIfPrime :: Int64 -> Bool
-checkIfPrime n
-    | find (>= n) sieve == Just n = True
-    | otherwise = False
+is_prime :: Int64 -> Bool
+is_prime n = null [ x | x <- [2.. isqrt n], n `mod`x  == 0]
 
--- Get all divisors of m (excl. m)
-divisors :: Int64 -> [Int64]
-divisors m = [ x | x<-[1..(quot m 2)], (mod m x) == 0 ]
-
--- Largest prime factor
-largestPrimeFactor :: Int64 -> Maybe Int64
-largestPrimeFactor n = find checkIfPrime $ reverse (divisors n)
+largest_prime_factor :: Int64 -> Maybe Int64
+largest_prime_factor n = find (\x -> (mod n x == 0) && is_prime x) (reverse [2,3..isqrt n])
