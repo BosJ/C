@@ -28,12 +28,12 @@ left_right = map (\x -> select x (x+4)) [0..(20*20)]
     where select n m = drop n . take m $ num
 
 up_down = map select [0..(20*16)+19] 
-    where select n = [num!!n, num!!(n+20), num!!(n+40), num!!(n+60)] 
+    where select n = map (num!!) [n, n+20, n+40, n+60]
 
 diagonal_lr = map select (concat $ map (\x -> map (+(x*20)) [0..16]) [0..16])
-    where select n = [num!!n, num!!(n+21), num!!(n+42), num!!(n+63)] 
+    where select n = map (num!!) [n, n+21, n+42, n+63]
 
 diagonal_rl = map select (concat $ map (\x -> map (+(x*20)) [3..19]) [0..16])
-    where select n = [num!!n, num!!(n+19), num!!(n+38), num!!(n+57)] 
+    where select n = map (num!!) [n, n+19, n+38, n+57]
 
 ans = maximum $ map product (left_right ++ up_down ++ diagonal_lr ++ diagonal_rl)
