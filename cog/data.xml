@@ -1,0 +1,8 @@
+<?xml version="1.0"?> 
+<Set Type="cogapp test"> 
+<Parameter Text="a" Number="1" />
+<Parameter Text="b" Number="2" />
+<Parameter Text="c" Number="3" />
+<Parameter Text="d" Number="4" />
+<Parameter Text="e" Number="5" />
+</Set> 
