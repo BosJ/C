@@ -1,8 +1,7 @@
 /* Solution to https://projecteuler.net/problem=2 
  * By considering the terms in the Fibonacci sequence 
  * whose values do not exceed four million, find the sum 
- * of the even-valued terms.
- * Jaco Bos bos.jch@gmail.com */
+ * of the even-valued terms. */
 
 #include <stdio.h>
 #include <unistd.h>
