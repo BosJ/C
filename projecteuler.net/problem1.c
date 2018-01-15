@@ -1,6 +1,5 @@
 /* Solution to https://projecteuler.net/problem=1 
- * Find the sum of all the multiples of 3 or 5 below 1000. 
- * Jaco Bos bos.jch@gmail.com */
+ * Find the sum of all the multiples of 3 or 5 below 1000. */
 
 #include <stdio.h>
 #include <unistd.h>
