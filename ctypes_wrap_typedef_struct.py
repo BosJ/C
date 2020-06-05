@@ -11,8 +11,8 @@ import sys
 from pycparser import c_ast, parse_file
 from collections import OrderedDict
 
-root_file   = "applicationdata.h"
-root_struct = "applicationdata_t"
+root_file   = "file_with_root_struct.h"
+root_struct = "typedef_struct_var_name"
 
 ast = parse_file(root_file, use_cpp=True)
 unresolved = []
